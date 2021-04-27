@@ -1,3 +1,10 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +12,31 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+nav{
+  height:120px;
+  width:100%;
+  background-color: gray;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+nav a{
+  text-decoration: none;
+  color: red;
+  font-size:18px;
+
+}
+
+nav a:hover{
+  color: darkred;
+  transition: color 0.5s;
+
+}
+
+nav a + a{
+  margin-left:50px;
 }

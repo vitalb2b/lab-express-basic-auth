@@ -1,0 +1,26 @@
+<main>
+    <h1>Logar em conta!!!</h1>
+
+    <form action="/login" method="post">
+    <div>
+        <label for='username'> Username</label>
+        <input type="text" name="username" placeholder="Digite o User name" id="username">
+    </div>
+
+    <div>
+        <label for='password'> password</label>
+        <input type="password" name="password" id="password" placeholder="Digite o Password">
+    </div>
+
+    {{#if errorMessage}}
+    <div>
+        <span>
+            {{errorMessage}}
+        </span>
+    </div>
+
+    {{/if}}
+
+    <button type="submit">Login</button>
+    </form>
+</main>

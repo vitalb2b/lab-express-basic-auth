@@ -1,0 +1,39 @@
+<main>
+    <h1>Crie sua conta</h1>
+
+    <form action="/signup" method="post">
+    <div>
+        <label for='username'> Username</label>
+        <input type="text" name="username" placeholder="Digite o User name" id="username" required>
+        {{#if usernameError}}
+        <div>
+             <span>{{usernameError}}</span>
+        </div>
+       
+        {{/if}}
+    </div>
+
+    <div>
+        <label for='password'> password</label>
+        <input type="password" name="password" id="password" placeholder="Digite o Password" required>
+
+        {{#if passwordError}}
+        <div>
+            <span>{{passwordError}}</span>
+        </div>
+        
+        {{/if}}
+    </div>
+
+    {{#if errorMessage}}
+    <div>
+        <span>
+            {{errorMessage}}
+        </span>
+    </div>
+
+    {{/if}}
+
+    <button type="submit">Cadastrar</button>
+    </form>
+</main>
